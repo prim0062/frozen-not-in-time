@@ -2,29 +2,32 @@ html {
   font-family: "Fredoka One", sans-serif;
 }
 
-body {
-  border-top: 5px solid #b3fbff;
-  background: repeating-linear-gradient(-45deg, #c9fcff, #d4fdff 33.3%);
-  border-bottom: 5px solid #b3fbff;
+section {
+  border-top: 8px solid #b3fbff;
+  background-image: repeating-linear-gradient(-33.3deg, #c9fcff 0%, #d4fdff 1.5%);
+  border-bottom: 8px solid #b3fbff;
+}
+
+h1, p, a {
+  transform-origin: left center;
+  text-shadow: 2px 2px 1px rgba(0, 0, 0, .2);
 }
 
 h1 {
   color: #990073;
+  transform: rotate(-9deg);
 }
 
 p {
   color: #c09;
   max-width: 19em;
-}
-
-h1, p {
-
+  transform: rotate(-3deg);
 }
 
 .btn-ghost {
   color: #c09;
   border-color: #990073;
-  background-color: #b3fbff;
+  background-color: rgba(0, 0, 0, 0);
 }
 
 .btn-ghost:hover {
@@ -34,25 +37,40 @@ h1, p {
 }
 
 .cherry {
-  position: fixed;
+  z-index: 3;
+  position: absolute;
+  transform:
+    translate(47px, -138px)
+    scale(.7, .7);
 }
 
 .fudge {
-  position: fixed;
+  z-index: 2;
+  position: absolute;
+  transform:
+    translate(43px, -59px)
+    scale(.7, .7);
 }
 
 .choc {
-  position: fixed;
+  z-index: 1;
+  position: absolute;
+  transform:
+    translate(53px, 14px)
+    scale(.7, .7);
 }
 
 .cone {
-  position: fixed;
+  z-index: 1;
+  position: absolute;
+  transform:
+    translate(47px, 204px)
+    scale(.7, .7);
 }
 
 .mint {
-  position: fixed;
+  position: absolute;
+  transform:
+    translate(47px, 100px)
+    scale(.7, .7);
 }
-
-transform:
-  translate(0, 0)
-  scale(0.8, .8);
