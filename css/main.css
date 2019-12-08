@@ -24,6 +24,25 @@ p {
   transform: rotate(-3deg);
 }
 
+.text {
+  opacity: 0;
+  animation: text .2s 1s ease-in forwards;
+}
+
+@keyframes text {
+
+  0% {
+    opacity: 0;
+    filter: blur(8px);
+  }
+
+  100% {
+    opacity: 100;
+    filter: blur(0);
+  }
+
+}
+
 .btn-ghost {
   color: #c09;
   border-color: #990073;
@@ -40,37 +59,135 @@ p {
   z-index: 3;
   position: absolute;
   transform:
-    translate(47px, -138px)
+    translate(47px, -300px)
     scale(.7, .7);
+  animation: cherry .2s .8s linear forwards;
 }
 
 .fudge {
   z-index: 2;
   position: absolute;
   transform:
-    translate(43px, -59px)
+    translate(43px, -300px)
     scale(.7, .7);
+  animation: fudge .2s .6s linear forwards;
 }
 
 .choc {
   z-index: 1;
   position: absolute;
   transform:
-    translate(53px, 14px)
+    translate(53px, -300px)
     scale(.7, .7);
+  animation: choc .2s .4s linear forwards;
 }
 
 .cone {
   z-index: 1;
   position: absolute;
-  transform:
-    translate(47px, 204px)
-    scale(.7, .7);
+  animation: cone .2s linear forwards;
 }
 
 .mint {
   position: absolute;
   transform:
-    translate(47px, 100px)
+    translate(47px, -300px)
     scale(.7, .7);
+  animation: mint .2s  .2s linear forwards;
+}
+
+@keyframes cone {
+
+  0% {
+    transform:
+      translate(47px, -200px)
+      scale(.7, .7);
+  }
+
+  100% {
+    transform:
+      translate(47px, 204px)
+      scale(.7, .7);
+  }
+
+}
+
+@keyframes mint {
+
+  0% {
+    transform:
+      translate(47px, -200px)
+      scale(.7, .7);
+  }
+
+  100% {
+    transform:
+      translate(47px, 100px)
+      scale(.7, .7);
+  }
+
+}
+
+@keyframes choc {
+
+  0% {
+    transform:
+      translate(53px, -300px)
+      scale(.7, .7);
+  }
+
+  100% {
+    transform:
+      translate(53px, 14px)
+      scale(.7, .7);
+  }
+
+}
+
+@keyframes fudge {
+
+  0% {
+    transform:
+      translate(43px, -300px)
+      scale(.7, .7);
+  }
+
+  100% {
+    transform:
+      translate(43px, -59px)
+      scale(.7, .7);
+  }
+
+}
+
+@keyframes cherry {
+
+  0% {
+    transform:
+      translate(43px, -300px)
+      scale(.7, .7);
+  }
+
+  100% {
+    transform:
+      translate(47px, -138px)
+      scale(.7, .7);
+  }
+
+}
+
+@media only screen and (min-width: 90em) {
+
+  .text {
+    padding-left: 8em;
+  }
+
+  .icecream {
+    padding-right: 10em;
+  }
+
+  .bottom {
+    padding-bottom: 1.5em;
+  }
+
 }
